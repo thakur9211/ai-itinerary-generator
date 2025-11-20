@@ -1,8 +1,6 @@
 # Virtual Environment (too large)
 venv/
 
-# Large model files
-lora_tinyllama_itinerary/
 
 # OS files
 .DS_Store
