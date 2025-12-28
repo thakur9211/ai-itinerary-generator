@@ -20,9 +20,7 @@ model = PeftModel.from_pretrained(base_model, LORA_MODEL_PATH)
 # Test with Delhi itinerary
 prompt = (
     "### Instruction:\n"
-    "Create a 2-day budget itinerary for Delhi under ₹1000 focusing on historical sites and street food. "
-    "Use only real Delhi POIs like Red Fort, Jama Masjid, Humayun's Tomb, Qutub Minar, India Gate. "
-    "Provide timeline and costs.\n\n"
+    "Create a 2 days itinerary for Noida for one person with a total budget of ₹500. Use public transport where possible and include per-day cost breakdown.\n\n"
     "### Response:\n"
 )
 
@@ -41,5 +39,5 @@ result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 if result.startswith(prompt):
     result = result[len(prompt):].strip()
 
-print("\n--- GENERATED DELHI ITINERARY ---\n")
+print("\n--- GENERATED NOIDA ITINERARY ---\n")
 print(result)

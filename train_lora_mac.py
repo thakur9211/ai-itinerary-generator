@@ -59,7 +59,7 @@ def tokenize_function(examples):
 
 # Load and process dataset
 print("Loading dataset...")
-dataset = load_dataset("json", data_files="train.jsonl")
+dataset = load_dataset("json", data_files="new_train.jsonl")
 dataset = dataset.map(format_instruction)
 dataset = dataset.map(tokenize_function, batched=True, remove_columns=["instruction", "input", "output", "text"])
 
