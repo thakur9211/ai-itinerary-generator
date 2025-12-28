@@ -1,13 +1,29 @@
-# # Virtual Environment (too large)
-# venv/
+# Virtual environments
+venv/
+env/
+.env/
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Model files (large)
+*.bin
+*.safetensors
+lora-itinerary-model/
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Logs
+*.log
