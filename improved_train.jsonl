@@ -1,0 +1,32 @@
+[
+  {
+    "instruction": "Create a 2 days itinerary for Noida for solo with a total budget of ₹500. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Day 1:\n- Morning: Visit Sector 18 Market (metro ₹20, breakfast ₹50)\n- Afternoon: Explore DLF Mall of India (lunch ₹80, metro ₹20)\n- Evening: Walk in City Park (free, snacks ₹30)\nEstimated Day 1: ₹200\n\nDay 2:\n- Morning: Visit Botanical Garden (metro ₹30, entry ₹10)\n- Afternoon: Explore Sector 125 markets (lunch ₹70, auto ₹40)\n- Evening: Relax at Worlds of Wonder (entry ₹100, metro ₹30)\nEstimated Day 2: ₹280\n\nTotal: ₹480\nNotes: Use Delhi Metro for efficient travel. Carry water bottle to save money."
+  },
+  {
+    "instruction": "Create a 3 days itinerary for Delhi for couple (2) with a total budget of ₹2000. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Day 1:\n- Morning: Red Fort (metro ₹40, entry ₹70, breakfast ₹120)\n- Afternoon: Chandni Chowk shopping (lunch ₹200, rickshaw ₹60)\n- Evening: India Gate (metro ₹40, street food ₹100)\nEstimated Day 1: ₹630\n\nDay 2:\n- Morning: Lotus Temple (metro ₹60, free entry, breakfast ₹100)\n- Afternoon: Humayun's Tomb (metro ₹40, entry ₹60, lunch ₹180)\n- Evening: Connaught Place (metro ₹40, dinner ₹250)\nEstimated Day 2: ₹730\n\nDay 3:\n- Morning: Qutub Minar (metro ₹80, entry ₹60, breakfast ₹100)\n- Afternoon: Hauz Khas Village (metro ₹40, lunch ₹200)\n- Evening: Local markets (auto ₹80, shopping ₹200)\nEstimated Day 3: ₹760\n\nTotal: ₹2120 (slightly over budget - skip some shopping)\nNotes: Buy day pass for metro to save money. Negotiate auto fares."
+  },
+  {
+    "instruction": "Create a 1 day itinerary for Mumbai for family (3-4) with a total budget of ₹1500. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Morning (9 AM - 12 PM):\n- Gateway of India visit (local train ₹40, breakfast ₹200)\n- Taj Hotel area walk (free)\n\nAfternoon (12 PM - 4 PM):\n- Marine Drive (taxi ₹150, lunch ₹400)\n- Chowpatty Beach (free, bhel puri ₹120)\n\nEvening (4 PM - 8 PM):\n- Colaba Causeway shopping (walking, snacks ₹150)\n- Return journey (local train ₹40)\n\nTotal: ₹1100\nRemaining ₹400 for emergencies/extra food\nNotes: Use local trains during non-peak hours. Carry sufficient water."
+  },
+  {
+    "instruction": "Create a 2 days itinerary for Bangalore for solo with a total budget of ₹800. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Day 1:\n- Morning: Lalbagh Botanical Garden (bus ₹20, entry ₹10, breakfast ₹60)\n- Afternoon: Bangalore Palace (bus ₹15, entry ₹230, lunch ₹80)\n- Evening: MG Road shopping (metro ₹25, snacks ₹50)\nEstimated Day 1: ₹490\n\nDay 2:\n- Morning: Cubbon Park (bus ₹20, free entry, breakfast ₹60)\n- Afternoon: Vidhana Soudha (walking, lunch ₹70)\n- Evening: Commercial Street (bus ₹25, shopping ₹100)\nEstimated Day 2: ₹275\n\nTotal: ₹765\nNotes: Use BMTC buses and Namma Metro. Avoid peak hours for better fares."
+  },
+  {
+    "instruction": "Create a 3 days itinerary for Jaipur for couple (2) with a total budget of ₹3000. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Day 1:\n- Morning: Hawa Mahal (auto ₹100, entry ₹100, breakfast ₹150)\n- Afternoon: City Palace (walking, entry ₹200, lunch ₹300)\n- Evening: Johari Bazaar (auto ₹80, shopping ₹400)\nEstimated Day 1: ₹1330\n\nDay 2:\n- Morning: Amber Fort (bus ₹60, entry ₹200, breakfast ₹120)\n- Afternoon: Jaigarh Fort (shared taxi ₹150, entry ₹70, lunch ₹250)\n- Evening: Nahargarh Fort sunset (auto ₹120, snacks ₹100)\nEstimated Day 2: ₹1070\n\nDay 3:\n- Morning: Albert Hall Museum (auto ₹80, entry ₹40, breakfast ₹100)\n- Afternoon: Birla Mandir (bus ₹30, free entry, lunch ₹200)\n- Evening: Local markets (auto ₹100, shopping ₹200)\nEstimated Day 3: ₹750\n\nTotal: ₹3150 (₹150 over - reduce shopping)\nNotes: Negotiate auto fares. Use RSRTC buses for longer distances."
+  },
+  {
+    "instruction": "Create a 1 week itinerary for Goa for group (5+) with a total budget of ₹15000. Use public/local transport and include per-day cost breakdown where applicable.",
+    "input": "",
+    "output": "Day 1: Arrival & North Goa\n- Calangute Beach (bus ₹200, lunch ₹1000, activities ₹800)\nEstimated Day 1: ₹2000\n\nDay 2: North Goa Beaches\n- Baga & Anjuna Beach (bike rental ₹600, meals ₹1200, water sports ₹1000)\nEstimated Day 2: ₹2800\n\nDay 3: Old Goa\n- Basilica of Bom Jesus (bus ₹150, entry free, meals ₹1000, shopping ₹500)\nEstimated Day 3: ₹1650\n\nDay 4: South Goa\n- Colva Beach (bus ₹300, meals ₹1200, beach activities ₹600)\nEstimated Day 4: ₹2100\n\nDay 5: Adventure Day\n- Dudhsagar Falls (shared taxi ₹800, entry ₹100, meals ₹1000)\nEstimated Day 5: ₹1900\n\nDay 6: Panaji City\n- City tour (bus ₹200, meals ₹1000, shopping ₹800, boat ride ₹400)\nEstimated Day 6: ₹2400\n\nDay 7: Departure\n- Local markets (auto ₹150, breakfast ₹300, souvenirs ₹500)\nEstimated Day 7: ₹950\n\nTotal: ₹13800\nNotes: Share costs among group members. Use local buses and shared taxis."
+  }
+]

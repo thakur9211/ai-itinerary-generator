@@ -59,23 +59,24 @@ def tokenize_function(examples):
 
 # Load and process dataset
 print("Loading dataset...")
-dataset = load_dataset("json", data_files="new_train.jsonl")
+dataset = load_dataset("json", data_files="rules_based_train.jsonl")
 dataset = dataset.map(format_instruction)
 dataset = dataset.map(tokenize_function, batched=True, remove_columns=["instruction", "input", "output", "text"])
 
 # Training arguments
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
-    num_train_epochs=3,
+    num_train_epochs=5,
     per_device_train_batch_size=1,
     gradient_accumulation_steps=4,
-    learning_rate=2e-4,
+    learning_rate=1e-4,
     fp16=False,  # Set to False for CPU training
-    logging_steps=10,
-    save_steps=100,
-    save_total_limit=2,
+    logging_steps=5,
+    save_steps=50,
+    save_total_limit=3,
     remove_unused_columns=False,
     dataloader_drop_last=False,
+    warmup_steps=10,
 )
 
 # Data collator

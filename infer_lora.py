@@ -1,43 +1,16 @@
-from peft import PeftModel
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
+from itinerary_generator import ItineraryGenerator
 
-MODEL_NAME = "ozgecanaktas/tinyllama-itinerary-final"
-LORA_MODEL_PATH = "./lora-itinerary-model"
+# Initialize the generator
+generator = ItineraryGenerator()
 
-print("Loading base model and LoRA adapter...")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=False)
-base_model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
-    trust_remote_code=False,
-    device_map={"": "cpu"},
-    torch_dtype=torch.float32
-)
+# Test parameters
+days = "2 days"
+city = "Noida"
+traveler_type = "one person"
+budget = "500"
 
-# Load LoRA model
-model = PeftModel.from_pretrained(base_model, LORA_MODEL_PATH)
+# Generate itinerary
+result = generator.generate_itinerary(days, city, traveler_type, budget)
 
-# Test with Delhi itinerary
-prompt = (
-    "### Instruction:\n"
-    "Create a 2 days itinerary for Noida for one person with a total budget of ₹500. Use public transport where possible and include per-day cost breakdown.\n\n"
-    "### Response:\n"
-)
-
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(
-    **inputs, 
-    max_new_tokens=300,
-    do_sample=False,
-    temperature=0.0,
-    pad_token_id=tokenizer.eos_token_id,
-)
-
-result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-
-# Remove prompt if echoed
-if result.startswith(prompt):
-    result = result[len(prompt):].strip()
-
-print("\n--- GENERATED NOIDA ITINERARY ---\n")
+print(f"\n--- GENERATED {city.upper()} ITINERARY ---\n")
 print(result)
