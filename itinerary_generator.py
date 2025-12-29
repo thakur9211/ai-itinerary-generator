@@ -1,6 +1,7 @@
 from peft import PeftModel
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+from datetime import datetime
 
 class ItineraryGenerator:
     def __init__(self):
@@ -26,23 +27,31 @@ class ItineraryGenerator:
         print("Model loaded successfully!")
     
     def generate_itinerary(self, days, city, traveler_type, budget):
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{timestamp}] Model tokenizing input...")
+        
         prompt = (
-            f"### Instruction:\n"
             f"Create a {days} itinerary for {city} for {traveler_type} with a total budget of ₹{budget}. "
-            f"Use public/local transport and include per-day cost breakdown where applicable.\n\n"
-            f"### Response:\n"
+            f"Use public transport and include per-day cost breakdown."
         )
         
         inputs = self.tokenizer(prompt, return_tensors="pt")
+        
+        gen_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{gen_timestamp}] Model generating response...")
+        
         outputs = self.model.generate(
             **inputs, 
-            max_new_tokens=400,
+            max_new_tokens=600,
             do_sample=True,
             temperature=0.7,
             top_p=0.9,
             repetition_penalty=1.1,
             pad_token_id=self.tokenizer.eos_token_id,
         )
+        
+        decode_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{decode_timestamp}] Model decoding output...")
         
         result = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
         
