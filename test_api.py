@@ -2,7 +2,7 @@ import requests
 import json
 
 # API endpoint
-url = "http://192.168.1.7:8001/generate-itinerary"
+url = "http://192.168.0.169:8001/generate-itinerary"
 
 # Test data
 test_data = {
